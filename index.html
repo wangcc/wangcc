@@ -14,7 +14,7 @@
   <meta name="description">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Eric Wang">
-<meta property="og:url" content="http://ykswang.coding.io/index.html">
+<meta property="og:url" content="http://eric-is.me/index.html">
 <meta property="og:site_name" content="Eric Wang">
 <meta property="og:description">
 <meta name="twitter:card" content="summary">
@@ -64,6 +64,94 @@ var _hmt = _hmt || [];
     <div class="content">
 
 
+
+
+  
+    <article class="post">
+  <header>
+    
+      <div class="icon"></div>
+      <a href="/2015/08/06/golang-cross-platforms/">
+  <time datetime="2015-08-06T10:09:18.000Z">
+    2015-08-06
+  </time>
+</a>
+    
+    
+  
+    <h1 class="title"><a href="/2015/08/06/golang-cross-platforms/">GO语言的跨平台编译</a></h1>
+  
+
+  </header>
+  
+  <div class="entry">
+    
+      <h1 id="准备工作">准备工作</h1><p>我们安装完Go工具包的时候，默认只自带了当前平台的编译环境，我们需要在go目录的src目录下执行如下命令来新增一个平台的编译环境。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GOOS=??? GOARCH=??? ./make.bash</span><br></pre></td></tr></table></figure></p>
+<p>GOOS/GOARCH的可选组合如下：</p>
+<table>
+<thead>
+<tr>
+<th>GOOS</th>
+<th style="text-align:center">GOARCH</th>
+<th style="text-align:right">Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>darwin</td>
+<td style="text-align:center">386</td>
+<td style="text-align:right">Mac 32位</td>
+</tr>
+<tr>
+<td>darwin</td>
+<td style="text-align:center">amd64</td>
+<td style="text-align:right">Mac 64位</td>
+</tr>
+<tr>
+<td>freebsd</td>
+<td style="text-align:center">386</td>
+<td style="text-align:right">FreeBSD 32位</td>
+</tr>
+<tr>
+<td>freebsd</td>
+<td style="text-align:center">amd64</td>
+<td style="text-align:right">FreeBSD 64位</td>
+</tr>
+<tr>
+<td>linux</td>
+<td style="text-align:center">386</td>
+<td style="text-align:right">Linux 32位</td>
+</tr>
+<tr>
+<td>linux</td>
+<td style="text-align:center">amd64</td>
+<td style="text-align:right">Linux 64位</td>
+</tr>
+<tr>
+<td>windows</td>
+<td style="text-align:center">386</td>
+<td style="text-align:right">Windows 32位</td>
+</tr>
+<tr>
+<td>windows</td>
+<td style="text-align:center">amd64</td>
+<td style="text-align:right">Windows 32位</td>
+</tr>
+</tbody>
+</table>
+<p>运行完成后，我们会在bin目录下看到新增的对应平台的目录</p>
+<h1 id="编译项目">编译项目</h1><p>用下列命令编译对应平台的可执行文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GOOS=??? GOARCH=??? go build xxxx.go</span><br></pre></td></tr></table></figure></p>
+
+    
+  </div>
+  <footer class="end-sep">
+    
+      
+      
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
 
 
   
