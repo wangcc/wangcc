@@ -4,9 +4,9 @@
   <title><![CDATA[Eric Wang]]></title>
   <subtitle><![CDATA[患中二病的测试开发攻城狮]]></subtitle>
   <link href="/atom.xml" rel="self"/>
-  <link href="http://wangcc.github.io//"/>
+  <link href="http://ykswang.coding.io//"/>
   <updated>2015-08-11T00:16:26.000Z</updated>
-  <id>http://wangcc.github.io//</id>
+  <id>http://ykswang.coding.io//</id>
   
   <author>
     <name><![CDATA[Eric Wang]]></name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title><![CDATA[Mac 笔记]]></title>
-    <link href="http://wangcc.github.io/2015/08/11/mac-help/"/>
-    <id>http://wangcc.github.io/2015/08/11/mac-help/</id>
+    <link href="http://ykswang.coding.io/2015/08/11/mac-help/"/>
+    <id>http://ykswang.coding.io/2015/08/11/mac-help/</id>
     <published>2015-08-10T23:48:35.000Z</published>
     <updated>2015-08-11T00:16:26.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
@@ -50,8 +50,8 @@
   
   <entry>
     <title><![CDATA[GO语言的跨平台编译]]></title>
-    <link href="http://wangcc.github.io/2015/08/06/golang-cross-platforms/"/>
-    <id>http://wangcc.github.io/2015/08/06/golang-cross-platforms/</id>
+    <link href="http://ykswang.coding.io/2015/08/06/golang-cross-platforms/"/>
+    <id>http://ykswang.coding.io/2015/08/06/golang-cross-platforms/</id>
     <published>2015-08-06T10:09:18.000Z</published>
     <updated>2015-08-06T11:02:22.000Z</updated>
     <content type="html"><![CDATA[<h1 id="准备工作">准备工作</h1><p>我们安装完Go工具包的时候，默认只自带了当前平台的编译环境，我们需要在go目录的src目录下执行如下命令来新增一个平台的编译环境。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GOOS=??? GOARCH=??? ./make.bash</span><br></pre></td></tr></table></figure></p>
@@ -120,8 +120,8 @@
   
   <entry>
     <title><![CDATA[A1528开启移动4G]]></title>
-    <link href="http://wangcc.github.io/2015/08/03/iphone5s-A1528-cmcc-4g/"/>
-    <id>http://wangcc.github.io/2015/08/03/iphone5s-A1528-cmcc-4g/</id>
+    <link href="http://ykswang.coding.io/2015/08/03/iphone5s-A1528-cmcc-4g/"/>
+    <id>http://ykswang.coding.io/2015/08/03/iphone5s-A1528-cmcc-4g/</id>
     <published>2015-08-03T00:37:41.000Z</published>
     <updated>2015-08-03T00:49:50.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
@@ -145,8 +145,8 @@
   
   <entry>
     <title><![CDATA[Firefox调整窗口大小时窗口黑白交替闪烁]]></title>
-    <link href="http://wangcc.github.io/2015/07/31/firefox-resize-bug-mac/"/>
-    <id>http://wangcc.github.io/2015/07/31/firefox-resize-bug-mac/</id>
+    <link href="http://ykswang.coding.io/2015/07/31/firefox-resize-bug-mac/"/>
+    <id>http://ykswang.coding.io/2015/07/31/firefox-resize-bug-mac/</id>
     <published>2015-07-31T02:33:57.000Z</published>
     <updated>2015-08-03T00:34:17.000Z</updated>
     <content type="html"><![CDATA[<p>最近更新到Firefox39的时候出现调整窗口大小的时候，窗口飞快的黑白色交替的闪烁，亮瞎了我的狗眼，自从Chrome诞生以后，Firefox的质量保证真心是每况愈下啊，在Mozilla的Support找到了解决方案，分享如下:</p>
@@ -166,8 +166,8 @@
   
   <entry>
     <title><![CDATA[临时解决Skype在Mac10.11的登录异常]]></title>
-    <link href="http://wangcc.github.io/2015/07/27/skype-microsoft-mac-10-11/"/>
-    <id>http://wangcc.github.io/2015/07/27/skype-microsoft-mac-10-11/</id>
+    <link href="http://ykswang.coding.io/2015/07/27/skype-microsoft-mac-10-11/"/>
+    <id>http://ykswang.coding.io/2015/07/27/skype-microsoft-mac-10-11/</id>
     <published>2015-07-27T03:00:00.000Z</published>
     <updated>2015-07-29T08:40:41.000Z</updated>
     <content type="html"><![CDATA[<p>手贱升级到了Mac 10.11, 发现Skype不能用微软帐号登录了，报错如下：<br><br></p>
@@ -200,8 +200,8 @@
   
   <entry>
     <title><![CDATA[用Hexo搭建博客]]></title>
-    <link href="http://wangcc.github.io/2015/07/27/build-hexo-blog/"/>
-    <id>http://wangcc.github.io/2015/07/27/build-hexo-blog/</id>
+    <link href="http://ykswang.coding.io/2015/07/27/build-hexo-blog/"/>
+    <id>http://ykswang.coding.io/2015/07/27/build-hexo-blog/</id>
     <published>2015-07-27T02:00:00.000Z</published>
     <updated>2015-07-29T08:40:35.000Z</updated>
     <content type="html"><![CDATA[<p>自从Github的访问越来越困难之后，我就在寻找博客的替代方案。有人一定会说”你可以翻墙啊”之类的，但是博客这东西，真心想有个顺畅的体验，偶尔懒得写教程，发博客的链接给别人，还得先教别人翻墙么？So, 辗转好多家，<a href="www.farbox.com">Farbox</a>, <a href="www.leanote.com">Leanote</a> 我都付费体验了，效果都真心不满意。</p>
