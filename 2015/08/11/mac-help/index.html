@@ -22,13 +22,13 @@
 安装方法：1ruby -e &amp;#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;#34;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mac 笔记">
-<meta property="og:url" content="http://ykswang.coding.io/2015/08/11/mac-help/index.html">
+<meta property="og:url" content="http://eric-is.me/2015/08/11/mac-help/index.html">
 <meta property="og:site_name" content="Eric Wang">
 <meta property="og:description" content="本文只是对自己遇到的一些问题的定期维护笔记，并非高大上教程
 
 开发环境Homebrew类似linux下的包管理工具，能够帮助我们快速的安装第三方库和程序
 安装方法：1ruby -e &amp;#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;#34;">
-<meta property="og:updated_time" content="2015-08-11T00:16:26.000Z">
+<meta property="og:updated_time" content="2015-08-12T01:02:04.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac 笔记">
 <meta name="twitter:description" content="本文只是对自己遇到的一些问题的定期维护笔记，并非高大上教程
@@ -110,6 +110,10 @@ var _hmt = _hmt || [];
 <h3 id="Java"><a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="external">Java</a></h3><p>Apple自己维护的Java过旧，推荐从Oracle官网下载Mac的安装包安装</p>
 <h3 id="Apache">Apache</h3><p>Mac自带了Apache服务器<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apachectl start</span><br></pre></td></tr></table></figure></p>
 <h1 id="系统配置">系统配置</h1><h3 id="清理打开方式列表">清理打开方式列表</h3><p>软件版本安装卸载和多次升级之后，打开方式里可能会存在一些缓存的垃圾<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>这个命令会导致所有的开机启动程序被清理，需要到各自的程序里重新关开一次开机启动</p>
+</blockquote>
+<h3 id="清理缓存和卸载软件">清理缓存和卸载软件</h3><p>首选推荐<a href="http://www.macapp.so/cleanmymac/" target="_blank" rel="external">CleanMyMac</a>, 不兼容时可用 <a href="http://www.macapp.so/cleanapp/" target="_blank" rel="external">CleanApp</a>替代<br>清理时请注意，不是到山穷水尽时不要清理语言文件，你不差那1G</p>
 
     
   </div>
