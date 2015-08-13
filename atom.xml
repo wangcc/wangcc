@@ -4,9 +4,9 @@
   <title><![CDATA[Eric Wang]]></title>
   <subtitle><![CDATA[患中二病的测试开发攻城狮]]></subtitle>
   <link href="/atom.xml" rel="self"/>
-  <link href="http://ykswang.coding.io//"/>
-  <updated>2015-08-13T01:34:41.000Z</updated>
-  <id>http://ykswang.coding.io//</id>
+  <link href="http://eric-is.me//"/>
+  <updated>2015-08-13T01:36:07.000Z</updated>
+  <id>http://eric-is.me//</id>
   
   <author>
     <name><![CDATA[Eric Wang]]></name>
@@ -17,13 +17,14 @@
   
   <entry>
     <title><![CDATA[折腾Scala]]></title>
-    <link href="http://ykswang.coding.io/2015/08/13/scala-get-started/"/>
-    <id>http://ykswang.coding.io/2015/08/13/scala-get-started/</id>
+    <link href="http://eric-is.me/2015/08/13/scala-get-started/"/>
+    <id>http://eric-is.me/2015/08/13/scala-get-started/</id>
     <published>2015-08-13T01:33:32.000Z</published>
-    <updated>2015-08-13T01:34:41.000Z</updated>
+    <updated>2015-08-13T01:36:07.000Z</updated>
     <content type="html"><![CDATA[<h2 id="1-_安装SBT编译工具">1. 安装SBT编译工具</h2><p>通过homebrew安装：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install sbt</span><br></pre></td></tr></table></figure></p>
 <p>安装后初始化：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sbt</span><br></pre></td></tr></table></figure></p>
 <p>第一次初始化的时候会下载很多的jar包，国内的网络环境下成功率基本没有，如果你有proxy，那么可以再执行<code>sbt</code>命令前进行如下配置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set HTTP_PROXY=http://proxy_host:port&#10;set HTTPS_PROXY=http://proxy_host:port</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
 <h2 id="2-_IDE_工具">2. IDE 工具</h2><h3 id="2-1_Scala_IDE">2.1 Scala IDE</h3><p>这是一个Eclipse插件，可以直接在Eclipse的Marketplace里搜索安装</p>
 <blockquote>
 <p>Scala IDE 并不支持在Eclipse里管理sbt项目，所以我们需要使用一个叫做<a href="https://github.com/typesafehub/sbteclipse" target="_blank" rel="external">sbteclipse</a>的插件来帮助我们使用sbt创建一个可让Scala IDE导入的工程。</p>
@@ -48,15 +49,18 @@
 <p>转化为 sbt 的 libraryDependencies 如下所示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">libraryDependencies += &#34;com.typesafe.akka&#34; % &#34;akka-actor_2.10&#34; % &#34;2.3.12&#34;</span><br></pre></td></tr></table></figure></p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h2 id="1-_安装SBT编译工具">1. 安装SBT编译工具</h2><p>通过homebrew安装：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="l]]>
+    <![CDATA[<h2 id="1-_安装SBT编译工具">1. 安装SBT编译工具</h2><p>通过homebrew安装：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install sbt</span><br></pre></td></tr></table></figure></p>
+<p>安装后初始化：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sbt</span><br></pre></td></tr></table></figure></p>
+<p>第一次初始化的时候会下载很多的jar包，国内的网络环境下成功率基本没有，如果你有proxy，那么可以再执行<code>sbt</code>命令前进行如下配置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set HTTP_PROXY=http://proxy_host:port&#10;set HTTPS_PROXY=http://proxy_host:port</span><br></pre></td></tr></table></figure></p>]]>
+    
     </summary>
     
   </entry>
   
   <entry>
     <title><![CDATA[Mac 笔记]]></title>
-    <link href="http://ykswang.coding.io/2015/08/11/mac-help/"/>
-    <id>http://ykswang.coding.io/2015/08/11/mac-help/</id>
+    <link href="http://eric-is.me/2015/08/11/mac-help/"/>
+    <id>http://eric-is.me/2015/08/11/mac-help/</id>
     <published>2015-08-10T23:48:35.000Z</published>
     <updated>2015-08-12T01:02:04.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
@@ -92,8 +96,8 @@
   
   <entry>
     <title><![CDATA[GO语言的跨平台编译]]></title>
-    <link href="http://ykswang.coding.io/2015/08/06/golang-cross-platforms/"/>
-    <id>http://ykswang.coding.io/2015/08/06/golang-cross-platforms/</id>
+    <link href="http://eric-is.me/2015/08/06/golang-cross-platforms/"/>
+    <id>http://eric-is.me/2015/08/06/golang-cross-platforms/</id>
     <published>2015-08-06T10:09:18.000Z</published>
     <updated>2015-08-06T11:02:22.000Z</updated>
     <content type="html"><![CDATA[<h1 id="准备工作">准备工作</h1><p>我们安装完Go工具包的时候，默认只自带了当前平台的编译环境，我们需要在go目录的src目录下执行如下命令来新增一个平台的编译环境。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GOOS=??? GOARCH=??? ./make.bash</span><br></pre></td></tr></table></figure></p>
@@ -162,8 +166,8 @@
   
   <entry>
     <title><![CDATA[A1528开启移动4G]]></title>
-    <link href="http://ykswang.coding.io/2015/08/03/iphone5s-A1528-cmcc-4g/"/>
-    <id>http://ykswang.coding.io/2015/08/03/iphone5s-A1528-cmcc-4g/</id>
+    <link href="http://eric-is.me/2015/08/03/iphone5s-A1528-cmcc-4g/"/>
+    <id>http://eric-is.me/2015/08/03/iphone5s-A1528-cmcc-4g/</id>
     <published>2015-08-03T00:37:41.000Z</published>
     <updated>2015-08-03T00:49:50.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
@@ -187,8 +191,8 @@
   
   <entry>
     <title><![CDATA[Firefox调整窗口大小时窗口黑白交替闪烁]]></title>
-    <link href="http://ykswang.coding.io/2015/07/31/firefox-resize-bug-mac/"/>
-    <id>http://ykswang.coding.io/2015/07/31/firefox-resize-bug-mac/</id>
+    <link href="http://eric-is.me/2015/07/31/firefox-resize-bug-mac/"/>
+    <id>http://eric-is.me/2015/07/31/firefox-resize-bug-mac/</id>
     <published>2015-07-31T02:33:57.000Z</published>
     <updated>2015-08-03T00:34:17.000Z</updated>
     <content type="html"><![CDATA[<p>最近更新到Firefox39的时候出现调整窗口大小的时候，窗口飞快的黑白色交替的闪烁，亮瞎了我的狗眼，自从Chrome诞生以后，Firefox的质量保证真心是每况愈下啊，在Mozilla的Support找到了解决方案，分享如下:</p>
@@ -208,8 +212,8 @@
   
   <entry>
     <title><![CDATA[临时解决Skype在Mac10.11的登录异常]]></title>
-    <link href="http://ykswang.coding.io/2015/07/27/skype-microsoft-mac-10-11/"/>
-    <id>http://ykswang.coding.io/2015/07/27/skype-microsoft-mac-10-11/</id>
+    <link href="http://eric-is.me/2015/07/27/skype-microsoft-mac-10-11/"/>
+    <id>http://eric-is.me/2015/07/27/skype-microsoft-mac-10-11/</id>
     <published>2015-07-27T03:00:00.000Z</published>
     <updated>2015-07-29T08:40:41.000Z</updated>
     <content type="html"><![CDATA[<p>手贱升级到了Mac 10.11, 发现Skype不能用微软帐号登录了，报错如下：<br><br></p>
@@ -242,8 +246,8 @@
   
   <entry>
     <title><![CDATA[用Hexo搭建博客]]></title>
-    <link href="http://ykswang.coding.io/2015/07/27/build-hexo-blog/"/>
-    <id>http://ykswang.coding.io/2015/07/27/build-hexo-blog/</id>
+    <link href="http://eric-is.me/2015/07/27/build-hexo-blog/"/>
+    <id>http://eric-is.me/2015/07/27/build-hexo-blog/</id>
     <published>2015-07-27T02:00:00.000Z</published>
     <updated>2015-07-29T08:40:35.000Z</updated>
     <content type="html"><![CDATA[<p>自从Github的访问越来越困难之后，我就在寻找博客的替代方案。有人一定会说”你可以翻墙啊”之类的，但是博客这东西，真心想有个顺畅的体验，偶尔懒得写教程，发博客的链接给别人，还得先教别人翻墙么？So, 辗转好多家，<a href="www.farbox.com">Farbox</a>, <a href="www.leanote.com">Leanote</a> 我都付费体验了，效果都真心不满意。</p>

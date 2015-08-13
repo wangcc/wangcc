@@ -14,7 +14,7 @@
   <meta name="description">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Eric Wang">
-<meta property="og:url" content="http://ykswang.coding.io/index.html">
+<meta property="og:url" content="http://eric-is.me/index.html">
 <meta property="og:site_name" content="Eric Wang">
 <meta property="og:description">
 <meta name="twitter:card" content="summary">
@@ -89,33 +89,14 @@ var _hmt = _hmt || [];
       <h2 id="1-_安装SBT编译工具">1. 安装SBT编译工具</h2><p>通过homebrew安装：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install sbt</span><br></pre></td></tr></table></figure></p>
 <p>安装后初始化：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sbt</span><br></pre></td></tr></table></figure></p>
 <p>第一次初始化的时候会下载很多的jar包，国内的网络环境下成功率基本没有，如果你有proxy，那么可以再执行<code>sbt</code>命令前进行如下配置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set HTTP_PROXY=http://proxy_host:port&#10;set HTTPS_PROXY=http://proxy_host:port</span><br></pre></td></tr></table></figure></p>
-<h2 id="2-_IDE_工具">2. IDE 工具</h2><h3 id="2-1_Scala_IDE">2.1 Scala IDE</h3><p>这是一个Eclipse插件，可以直接在Eclipse的Marketplace里搜索安装</p>
-<blockquote>
-<p>Scala IDE 并不支持在Eclipse里管理sbt项目，所以我们需要使用一个叫做<a href="https://github.com/typesafehub/sbteclipse" target="_blank" rel="external">sbteclipse</a>的插件来帮助我们使用sbt创建一个可让Scala IDE导入的工程。</p>
-<p>安装方法：</p>
-<ol>
-<li>待sbt初始化完后，在~/.sbt/{version}/下创建 plugins 目录</li>
-<li>在 plugins 目录下创建一个叫做 plugins.sbt 的文件</li>
-<li>在文件中添加一行: <code>addSbtPlugin(&quot;com.typesafe.sbteclipse&quot; % &quot;sbteclipse-plugin&quot; % &quot;4.0.0&quot;)</code>, 注意修改<code>4.0.0</code>为最新的版本号</li>
-<li>重新在任意sbt工程目录或者空白目录下执行<code>sbt</code>初始化，会自动下载插件</li>
-<li>在sbt命令行下输入<code>eclipse</code>并回车，会创建一个可供Scala IDE导入的工程</li>
-</ol>
-</blockquote>
-<h3 id="2-2_Intellij_Idea">2.2 Intellij Idea</h3><p>插件仓库有一个Scala的插件，功能齐全</p>
-<p>备注：最好把plugins.sbt的日志级别调整下：<code>logLevel := Level.Debug</code>，以防卡住一直没反应不知道卡哪里</p>
-<h2 id="3-_SBT">3. SBT</h2><h3 id="3-1_目录结构">3.1 目录结构</h3><p>受 Java 平台的 Maven 影响，sbt 使用的目录结构和 Maven 类似，一个基本的 sbt 目录结构如下所述：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sbtProject&#10;&#9500;&#9472;&#9472; build.sbt&#10;&#9500;&#9472;&#9472; lib &#60;unmanaged dependencies jars&#62;&#10;&#9500;&#9472;&#9472; project&#10;&#9474;   &#9492;&#9472;&#9472; Build.scala (optional)&#10;&#9500;&#9472;&#9472; src&#10;&#9474;   &#9500;&#9472;&#9472; main&#10;&#9474;   &#9474;   &#9500;&#9472;&#9472; java &#60;main Java sources&#62;&#10;&#9474;   &#9474;   &#9500;&#9472;&#9472; resources &#60;files to include in main jar here&#62;&#10;&#9474;   &#9474;   &#9492;&#9472;&#9472; scala &#60;main Scala sources&#62;&#10;&#9474;   &#9492;&#9472;&#9472; test&#10;&#9474;       &#9500;&#9472;&#9472; java &#60;test Java sources&#62;&#10;&#9474;       &#9500;&#9472;&#9472; resources &#60;files to include in test jar here&#62;&#10;&#9474;       &#9492;&#9472;&#9472; scala &#60;test Scala sources&#62;&#10;&#9492;&#9472;&#9472; target &#60;compiled classes, packaged jars, managed files, caches, and documentation&#62;</span><br></pre></td></tr></table></figure>
-<h3 id="3-2_构建控制">3.2 构建控制</h3><p>构建过程由项目目录下的build.sbt和子目录project下的*.scala 共同控制。</p>
-<h3 id="3-3_依赖库管理">3.3 依赖库管理</h3><p>依赖的库可通过 Unmanaged 和 Managed 两种方式添加，Unmanaged dependencies 通常放置于当前项目目录下的子目录lib, sbt 会将其作为 classpath.</p>
-<p>另一种常见的方式为 Managed dependencies, 底层使用 Apache Ivy 作为库的依赖管理。添加依赖库在 sbt 中十分简单，最简洁的方式可以在build.sbt 中添加一行:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">libraryDependencies += groupID % artifactID % revision</span><br></pre></td></tr></table></figure></p>
-<p>对于多个依赖，自然可以写多行libraryDependencies, 也可使用Seq合并多行。</p>
-<h3 id="3-4_使用Maven_Repository_Library">3.4 使用Maven Repository Library</h3><p>在 sbt 中使用 Maven 仓库非常简单，将 Maven 的groupId, artifactId, 和 version 域更改为 sbt libraryDependencies 字符串即可。以 Akka Actor 为例，相应的 Maven 依赖写法如下：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">dependency</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">groupId</span>&gt;</span>com.typesafe.akka<span class="tag">&lt;/<span class="title">groupId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">artifactId</span>&gt;</span>akka-actor_2.10<span class="tag">&lt;/<span class="title">artifactId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">version</span>&gt;</span>2.3.12<span class="tag">&lt;/<span class="title">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>转化为 sbt 的 libraryDependencies 如下所示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">libraryDependencies += &#34;com.typesafe.akka&#34; % &#34;akka-actor_2.10&#34; % &#34;2.3.12&#34;</span><br></pre></td></tr></table></figure></p>
-
     
   </div>
   <footer class="end-sep">
     
+      
+        <div class="alignleft">
+          <a href="/2015/08/13/scala-get-started/#more" class="more-link">阅读全文</a>
+        </div>
       
       
     

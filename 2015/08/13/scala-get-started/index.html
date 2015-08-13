@@ -20,12 +20,12 @@
 第一次初始化的时候会下载很多的jar包，国内的网络环境下成功率基本没有，如果你有proxy，那么可以再执行sbt命令前进行如下配置：1set HTTP_PROXY=http://proxy_host:port&amp;#10;set HTTPS_PROXY=http://proxy_host:po">
 <meta property="og:type" content="article">
 <meta property="og:title" content="折腾Scala">
-<meta property="og:url" content="http://ykswang.coding.io/2015/08/13/scala-get-started/index.html">
+<meta property="og:url" content="http://eric-is.me/2015/08/13/scala-get-started/index.html">
 <meta property="og:site_name" content="Eric Wang">
 <meta property="og:description" content="1. 安装SBT编译工具通过homebrew安装：1brew install sbt
 安装后初始化：1sbt
 第一次初始化的时候会下载很多的jar包，国内的网络环境下成功率基本没有，如果你有proxy，那么可以再执行sbt命令前进行如下配置：1set HTTP_PROXY=http://proxy_host:port&amp;#10;set HTTPS_PROXY=http://proxy_host:po">
-<meta property="og:updated_time" content="2015-08-13T01:34:41.000Z">
+<meta property="og:updated_time" content="2015-08-13T01:36:07.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="折腾Scala">
 <meta name="twitter:description" content="1. 安装SBT编译工具通过homebrew安装：1brew install sbt
@@ -94,6 +94,7 @@ var _hmt = _hmt || [];
       <h2 id="1-_安装SBT编译工具">1. 安装SBT编译工具</h2><p>通过homebrew安装：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install sbt</span><br></pre></td></tr></table></figure></p>
 <p>安装后初始化：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sbt</span><br></pre></td></tr></table></figure></p>
 <p>第一次初始化的时候会下载很多的jar包，国内的网络环境下成功率基本没有，如果你有proxy，那么可以再执行<code>sbt</code>命令前进行如下配置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set HTTP_PROXY=http://proxy_host:port&#10;set HTTPS_PROXY=http://proxy_host:port</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
 <h2 id="2-_IDE_工具">2. IDE 工具</h2><h3 id="2-1_Scala_IDE">2.1 Scala IDE</h3><p>这是一个Eclipse插件，可以直接在Eclipse的Marketplace里搜索安装</p>
 <blockquote>
 <p>Scala IDE 并不支持在Eclipse里管理sbt项目，所以我们需要使用一个叫做<a href="https://github.com/typesafehub/sbteclipse" target="_blank" rel="external">sbteclipse</a>的插件来帮助我们使用sbt创建一个可让Scala IDE导入的工程。</p>
