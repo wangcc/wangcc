@@ -1,0 +1,174 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="baidu-site-verification" content="8PSXUpZTlU" />
+  
+  <title>用Intellij Idea写Scala | Eric Wang</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  
+    <meta name="author" content="Eric Wang">
+  
+  
+    <meta name="description" content="Intellij Idea 最近可谓势头迅猛，不进拉到的Google的赞助成为Android Studio的本尊， 连Scala这种小众语言的插件也是甩Eclipse几条街
+
+1. 安装Scala插件">
+  
+  <meta name="description" content="Intellij Idea 最近可谓势头迅猛，不进拉到的Google的赞助成为Android Studio的本尊， 连Scala这种小众语言的插件也是甩Eclipse几条街
+
+1. 安装Scala插件">
+<meta property="og:type" content="article">
+<meta property="og:title" content="用Intellij Idea写Scala">
+<meta property="og:url" content="http://eric-is.me/2015/08/13/write-scala-with-intellij/index.html">
+<meta property="og:site_name" content="Eric Wang">
+<meta property="og:description" content="Intellij Idea 最近可谓势头迅猛，不进拉到的Google的赞助成为Android Studio的本尊， 连Scala这种小众语言的插件也是甩Eclipse几条街
+
+1. 安装Scala插件">
+<meta property="og:image" content="http://eric-is.me/static/write-scala-with-intellij/QQ20150813-4.png">
+<meta property="og:image" content="http://eric-is.me/static/write-scala-with-intellij/QQ20150813-5.png">
+<meta property="og:image" content="http://eric-is.me/static/write-scala-with-intellij/QQ20150813-6.png">
+<meta property="og:image" content="http://eric-is.me/static/write-scala-with-intellij/QQ20150813-7.png">
+<meta property="og:updated_time" content="2015-08-13T12:08:53.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="用Intellij Idea写Scala">
+<meta name="twitter:description" content="Intellij Idea 最近可谓势头迅猛，不进拉到的Google的赞助成为Android Studio的本尊， 连Scala这种小众语言的插件也是甩Eclipse几条街
+
+1. 安装Scala插件">
+  
+  
+  <link rel="stylesheet" href="../../../../css/style.css" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?5a0577f5a3818fb3a31da17440373a0a";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <header id="header">
+  <div class="title">
+    <h1><a href="/">Eric Wang</a></h1>
+    <p><a href="/">患中二病的测试开发攻城狮</a></p>
+  </div>
+  <nav class="nav">
+    <ul>
+      
+        <li><a href="/">主页</a></li>
+      
+        <li><a href="/archives">存档</a></li>
+      
+        <li><a href="/atom.xml">订阅</a></li>
+      
+        <li><a href="/about">关于</a></li>
+      
+      
+    </ul>
+    <div class="clearfix"></div>
+  </nav>
+  <div class="clearfix"></div>
+</header>
+    <div class="content"><article class="post">
+  <header>
+    
+      <div class="icon"></div>
+      <a href="/2015/08/13/write-scala-with-intellij/">
+  <time datetime="2015-08-13T11:48:00.000Z">
+    2015-08-13
+  </time>
+</a>
+    
+    
+  
+    <h1 class="title">用Intellij Idea写Scala</h1>
+  
+
+  </header>
+  
+  <div class="entry">
+    
+      <blockquote>
+<p>Intellij Idea 最近可谓势头迅猛，不进拉到的Google的赞助成为Android Studio的本尊， 连Scala这种小众语言的插件也是甩Eclipse几条街</p>
+</blockquote>
+<h2 id="1-_安装Scala插件">1. 安装Scala插件</h2><img src="/static/write-scala-with-intellij/QQ20150813-4.png">
+<a id="more"></a>
+<img src="/static/write-scala-with-intellij/QQ20150813-5.png">
+<h2 id="2-_创建SBT工程">2. 创建SBT工程</h2><img src="/static/write-scala-with-intellij/QQ20150813-6.png">
+<img src="/static/write-scala-with-intellij/QQ20150813-7.png">
+<p>创建完后，安静等待SBT刷新完成，这是一个漫长而坑爹的过程</p>
+<h2 id="3-_练手：利用WS发送GET请求">3. 练手：利用WS发送GET请求</h2><p>Scala的Play Framework里有一个很强大的异步请求库WS，我们用它来发送一次GET请求</p>
+<h3 id="3-1_添加Play_Framework的源">3.1 添加Play Framework的源</h3><p>修改build.sbt，添加如下内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">resolvers += &#34;Typesafe Releases&#34; at &#34;https://repo.typesafe.com/typesafe/releases/&#34;</span><br></pre></td></tr></table></figure></p>
+<h3 id="3-2_引用WS库">3.2 引用WS库</h3><p>整个Play Framework太大了，我们只引用WS的部分</p>
+<p>修改build.sbt，添加如下内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">libraryDependencies += &#34;com.typesafe.play&#34; %% &#34;play-ws&#34; % &#34;2.4.1&#34;</span><br></pre></td></tr></table></figure></p>
+<h3 id="3-3_编码">3.3 编码</h3><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> play.api.libs.ws._</span><br><span class="line"><span class="keyword">import</span> play.api.libs.ws.ning._</span><br><span class="line"><span class="keyword">import</span> scala.concurrent.<span class="type">Future</span></span><br><span class="line"><span class="keyword">import</span> concurrent.<span class="type">Await</span></span><br><span class="line"><span class="keyword">import</span> concurrent.duration._</span><br><span class="line"><span class="keyword">import</span> com.ning.http.client.<span class="type">AsyncHttpClientConfig</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">Hello</span> &#123;</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">main</span> (</span>args: <span class="type">Array</span>[<span class="type">String</span>]) &#123;</span><br><span class="line">		<span class="comment">// 创建一个httpclient</span></span><br><span class="line">        <span class="function"><span class="keyword">val</span> <span class="title">builder</span> =</span> <span class="keyword">new</span> <span class="type">AsyncHttpClientConfig</span>.<span class="type">Builder</span>()</span><br><span class="line">        <span class="function"><span class="keyword">val</span> <span class="title">config</span> =</span> builder.build()</span><br><span class="line">        <span class="function"><span class="keyword">val</span> <span class="title">client</span> =</span> <span class="keyword">new</span> <span class="type">NingWSClient</span>(config)</span><br><span class="line">		</span><br><span class="line">        <span class="comment">// 发送请求</span></span><br><span class="line">        <span class="function"><span class="keyword">val</span> <span class="title">response</span>:</span> <span class="type">Future</span>[<span class="type">WSResponse</span>] = client.url(<span class="string">"http://www.baidu.com"</span>).get()</span><br><span class="line">		</span><br><span class="line">        <span class="comment">// 等待返回，最多60s</span></span><br><span class="line">        <span class="type">Await</span>.result(response, <span class="number">60.</span>second)</span><br><span class="line">		</span><br><span class="line">        <span class="comment">// 打印返回内容</span></span><br><span class="line">        println(response.value.get.get.body)</span><br><span class="line">		</span><br><span class="line">        <span class="comment">// 关闭连接</span></span><br><span class="line">        client.close()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3-4_去除Netty的Debug日志">3.4 去除Netty的Debug日志</h3><p>在<code>/src/main/resources/</code>下新建logback.xml<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="pi">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">configuration</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="title">appender</span> <span class="attribute">name</span>=<span class="value">"CONSOLE"</span> <span class="attribute">class</span>=<span class="value">"ch.qos.logback.core.ConsoleAppender"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">target</span>&gt;</span>System.out<span class="tag">&lt;/<span class="title">target</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">encoder</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="title">pattern</span>&gt;</span>%X&#123;akkaTimestamp&#125; %-5level[%thread] %logger&#123;0&#125; - %msg%n<span class="tag">&lt;/<span class="title">pattern</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="title">encoder</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">appender</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="title">root</span> <span class="attribute">level</span>=<span class="value">"ERROR"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">appender-ref</span> <span class="attribute">ref</span>=<span class="value">"CONSOLE"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">root</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="title">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+
+    
+  </div>
+  <footer>
+    
+      
+      
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+
+<section id="comment">
+  <h1 class="title">评论</h1>
+  <div class="ds-thread" data-title="用Intellij Idea写Scala">
+  </div>
+</section>
+</div>
+  </div>
+  <footer id="footer"><div class="copyright">
+  
+  &copy; 2015 <a href="/">Eric Wang</a>
+  
+</div>
+<div class="theme-copyright">
+  Theme by <a href="https://github.com/orderedlist" target="_blank">orderedlist</a>
+   |
+  Redesign by <a href="http://heroicyang.com/" target="_blank">Heroic Yang</a>
+</div>
+</footer>
+  <script src="/js/jquery.min.js"></script>
+<script src="/js/scale.fix.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<script type="text/javascript">
+  var duoshuoQuery = { short_name: 'coode' };
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';
+    ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+  (function($){
+    $('.fancybox').fancybox();
+  })(jQuery);
+</script>
+
+
+</body>
+</html>
